@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['geomap']});
+      google.charts.setOnLoadCallback(drawMap);
+
+      function drawMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'RTI Sessions'],
+          ['United Kingdom', 4],
+          ['Germany', 1],
+          ['United Arab Emirates', 10],
+        ]);
+
+        var options = {};
+        options['dataMode'] = 'regions';
+        options['region'] = '154';
+
+        var container = document.getElementById('regions_div');
+        var geomap = new google.visualization.GeoMap(container);
+
+        geomap.draw(data, options);
+      };
+    </script>
+
+
+
+  </head>
+  <body>
+    <div id="regions_div"></div>
+  </body>
+</html>
