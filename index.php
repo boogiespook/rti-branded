@@ -1,33 +1,31 @@
 <?php
+// Session initialization
 session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Ready to Innovate?</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" >
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
-	<link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css"/>
-
-<!--	<script src="js/jquery-1.10.2.js"></script>-->
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
-  <script>
-  $( function() {
-    $( "#tabs" ).tabs();
-  } );
-  </script>
-  
-    <script>
-  $( function() {
-    $( "input" ).checkboxradio();
-  } );
-  </script>
+    <head>
+        <title>Ready to Innovate?</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+        <link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css"/>
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        // Tabs definitions
+        <script>
+            $( function() {
+                $( "#tabs" ).tabs();
+            } );
+        </script>
+        <script>
+            $( function() {
+                $( "input" ).checkboxradio();
+            } );
+        </script>
   
   <style>
       #locationField, #controls {
