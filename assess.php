@@ -11,15 +11,53 @@
       <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
       <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
       <link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css"/>
-      <!-- Test 3 -->
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="css/grid.css">
+      <link rel="stylesheet" type="text/css" href="css/custom.css">
+      <link rel="stylesheet" type="text/css" href="css/glyphicon.css">
       <!--  <script src="js/jquery-1.10.2.js"></script>-->
       <link rel="stylesheet" href="/resources/demos/style.css">
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script>
-         $( function() {
-           $( "#tabs" ).tabs();
-         } );
+      <script type="text/javascript">
+          $( function() {
+         $( ".tabs" ).tabs();
+
+         var max = 4;
+
+         if ( $('#tabs-next').length ) {
+             var selected = $(".tabs").tabs("option", "active");
+             
+             if ( selected < max ) {
+            $('#tabs-next').html('<a href="#" class="button">Next</a>');
+             } else {
+            $('#tabs-next').empty();
+             }
+         }
+         
+         $('.tabs li').bind('click', function() {
+             var selected = $(".tabs").tabs("option", "active");
+
+             if ( selected < max ) {
+            $('#tabs-next').html('<a href="#" class="button">Next</a>');
+             } else {
+            $('#tabs-next').empty();
+             }
+         });
+
+         $('#tabs-next').bind('click', function() {
+             var selected = $(".tabs").tabs("option", "active");
+
+             if ( (selected + 1) < max ) {
+            $('.tabs').tabs('option', 'active', selected + 1);
+            $('#tabs-next').html('<a href="#" class="button">Next</a>');
+             } else {
+            $('#tabs-next').empty();
+             }
+
+             $('.tabs').tabs('option', 'active', selected + 1);
+         });
+          });
       </script>
       <script>
          $( function() {
@@ -45,104 +83,60 @@
            $( "input" ).checkboxradio();
          } );
       </script>
-      <style>
-         #locationField, #controls {
-         position: relative;
-         width: 480px;
-         }
-         #autocomplete {
-         position: absolute;
-         top: 0px;
-         left: 0px;
-         width: 99%;
-         }
-         .label {
-         text-align: right;
-         font-weight: bold;
-         color: #303030;
-         }
-         #address {
-         border: 1px solid #000090;
-         background-color: #f0f0ff;
-         width: 480px;
-         padding-right: 2px;
-         }
-         #address td {
-         font-size: 10pt;
-         }
-         .field {
-         width: 99%;
-         }
-         .slimField {
-         width: 80px;
-         }
-         .wideField {
-         width: 200px;
-         }
-         #locationField {
-         height: 20px;
-         margin-bottom: 2px;
-         }
-         .page { position: absolute; 
-         top: 10; 
-         left: 100; 
-         visibility: hidden; 
-         } 
-         body {
-         font-family: 'overpass'
-         }
-         p { font-family: 'overpass', sans-serif; line-height: 28px; margin-bottom: 15px; color: #666; }
-         input {
-         border-radius: 15px;
-         margin: 10px;
-         }  
-         fieldset {
-         border: 0;
-         }
-         .overflow {
-         height: 200px;
-         }
-         h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-weight: 400; line-height: 32px; margin: 0 0 14px; }
-         input[type=submit] {
-         padding:0px 10px;
-         width: 135px;
-         height: 205x;
-         font-size:20px; 
-         background:#EE6363; 
-         border:0 none;
-         cursor:pointer;
-         -webkit-border-radius: 5px;
-         border-radius: 5px; 
-         }
-      </style>
    </head>
    <body>
       <nav class="navbar navbar-default" role="navigation">
          <div class="container-fluid">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="index.php"><img src="images/innovate.png">  Ready to Innovate?</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar1">
-               <ul class="nav navbar-nav navbar-right">
-                  <?php if (isset($_SESSION['usr_id'])) { ?>
-                  <li><a href="#">Signed in as <?php echo $_SESSION['usr_name']; ?></a></li>
-                  <li><a href="passwd.php">Change Password</a></li>
-                  <li><a href="logout.php">Log Out</a></li>
-                  <li><a href="blog">Blog</a></li>
-                  <?php } else { ?>
-                  <li><a href="login.php">Login</a></li>
-                  <li><a href="register.php">Sign Up</a></li>
-                  <?php } ?>
-               </ul>
+            <div class="inner-wrapper">
+               <div class="navbar-header grid">
+                  <div class="xl-colspan-2 m-colspan-10 s-colspan-9">
+                  <a class="navbar-brand" href="index.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
+                  </div>
+
+                  <div class="xl-gap-8 xl-colspan-2 m-gap-1 m-colspan-2 s-colspan-3">
+                     <div class="collapse navbar-collapse" id="navbar1">
+                        <ul class="nav navbar-nav navbar-right">
+                           <?php if (isset($_SESSION['usr_id'])) { ?>
+                           <li><a href="#">Signed in as <?php echo $_SESSION['usr_name']; ?></a></li>
+                           <li><a href="passwd.php">Change Password</a></li>
+                           <li><a href="logout.php">Log Out</a></li>
+                           <!--<li><a href="blog">Blog</a></li>-->
+                           <?php } else { ?>
+                           <li><a href="login.php" title="Login" alt="Login"><span class="glyphicon glyphicon-log-in" style="margin-top: 5px; color: #fff;"></span></a></li>
+                           <li class="active"><a href="register.php" title="Register" alt="Register"><span class="glyphicon glyphicon-user" style="margin-top: 5px; color: #fff;"></span></a></li>
+                           <?php } ?>
+                        </ul>
+                     </div>
+                  </div>
+                  <!--
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  -->
+                  <!--
+                  <a class="navbar-brand" href="index.php"><img src="images/innovate.png">  Ready to Innovate?</a>
+                  -->
+               </div>
             </div>
          </div>
       </nav>
+      <div class="grid header" style="margin-bottom: 50px;">
+          <div class="xl-colspan-12">
+            <div class="inner-wrapper">
+              <p style="color: #fff; font-size: 18px; margin-bottom: 0; padding-bottom: 0; line-height: 18px; margin-top: 35px; font-family: 'overpass';"><strong>RED HAT</strong><sup>&#174;</sup></p>
+
+              <p style="color: #fff; font-size: 25px; line-height: 25px; margin-top: 0; padding-top: 0; font-family: 'overpass';">SERVICES</p>
+
+              <div>
+                <p id="slogan" style="font-family: 'overpass';">IS YOUR IT ORGANISATION<br>
+                READY TO INNOVATE?</p>
+              </div>
+            </div>
+          </div>
+      </div>
       <?php
          if(isset($_SESSION['usr_id'])) {
          include 'dbconnect.php';
@@ -153,40 +147,90 @@
          <!--      <div class="jumbotron"> -->
          <form name="myForm" id="innovate-form" action="tmp.php"  class="w3-container">
             <div id="tabs">
-               <ul>
-                  <?php
-                     $i = 1;
-                     $areas = array("Introduction","Details","Automation","Methodology","Architecture","Strategy","Environment");
-                     foreach ($areas as $area) {
-                      print "<li><a href=\"#tabs-" . $i . "\">$area</a></li>";
-                      $i++;   
-                     }
-                     ?>
-                  <li><input type="submit" value="Submit"></li>
-               </ul>
-               <div id="tabs-1">
-                  <h3>Welcome to the "Ready to Innovate?" Assessment.</h3>
-                  <p>
-                     <b>AIM</b>: To understand the wider issues around PaaS / DevOps adoption; what will make it successful or why has it stalled.  In parallel with technical PoCs or pilots.
-                  </p>
-                  <p>
-                     By the end of this assessment you will:
-                  <ul>
-                     <li>    Understand the wider issues around Platform-as-a-Service and DevOps adoption in parallel with technical PoCs or pilots.
-                     <li>
-                        Understand the maturity of your organization across five outlined areas of interest:
-                        <ul>
-                           <li>Automation
-                           <li>Methodology
-                           <li>Architecture
-                           <li>Strategy
-                           <li>Environment
-                        </ul>
-                     <li>Walk away with next steps and recommended follow-up sessions from Red Hat Consulting to dive deep into the challenges and opportunities that face your business.
-                  </ul>
-                  <br>
-                  <p>To complete the assessment, please use the tabs moving from left to right.  Once complete, click "Submit".</p>
+               <div class="grid">
+                  <div class="xl-gap-3 xl-colspan-8 m-gap-1 m-colspan-12">
+                     <ul>
+                        <?php
+                           $i = 1;
+                           $areas = array("Introduction","Details","Automation","Methodology","Architecture","Strategy","Environment");
+                           foreach ($areas as $area) {
+                            print "<li><a href=\"#tabs-" . $i . "\">$area</a></li>";
+                            $i++;   
+                           }
+                           ?>
+                        <li><input type="submit" value="Submit"></li>
+                     </ul>
+                  </div>
                </div>
+               
+               <div id="tabs-contents" class="inner-wrapper">
+                  <div class="grid">
+                     <div class="xl-colspan-11">
+                        <div id="tabs-1">
+                           <div class="widget">
+                              <div class="grid">
+                                 <div class="xl-colspan-6 l-colspan-12">
+
+                                       
+
+
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+
+
+
+
+
+
+<!--          
+<h3>Welcome to the "Ready to Innovate?" Assessment.</h3>
+<p>
+<b>AIM</b>: To understand the wider issues around PaaS / DevOps adoption; what will make it successful or why has it stalled.  In parallel with technical PoCs or pilots.
+</p>
+<p>
+By the end of this assessment you will:
+<ul>
+<li>    Understand the wider issues around Platform-as-a-Service and DevOps adoption in parallel with technical PoCs or pilots.
+<li>
+Understand the maturity of your organization across five outlined areas of interest:
+<ul>
+<li>Automation
+<li>Methodology
+<li>Architecture
+<li>Strategy
+<li>Environment
+</ul>
+<li>Walk away with next steps and recommended follow-up sessions from Red Hat Consulting to dive deep into the challenges and opportunities that face your business.
+</ul>
+<br>
+<p>To complete the assessment, please use the tabs moving from left to right.  Once complete, click "Submit".</p>
+-->
+
+
+
+
                <div id="tabs-2">
                   <label class="w3-label w3-validate">Client Name</label>
                   <input class="w3-input" name="customerName" type="text" required>
