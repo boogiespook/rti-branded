@@ -3,7 +3,7 @@ function connectDB() {
 ## Database stuff
 global $db;
 ##$db = mysql_connect('localhost','root','CHANGEME');
-$db = ($GLOBALS["___mysqli_ston"] = mysqli_connect('localhost', 'root', 'CHANGEME'));
+$db = ($GLOBALS["___mysqli_ston"] = mysqli_connect('localhost', 'root', 'root'));
 
 	if (!$db) {
 	die("Unable to connect to database");

@@ -90,7 +90,7 @@
             <div class="inner-wrapper">
                <div class="navbar-header grid">
                   <div class="xl-colspan-2 m-colspan-10 s-colspan-9">
-                  <a class="navbar-brand" href="index.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
+                      <a class="navbar-brand" href="index.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
                   </div>
 
                   <div class="xl-gap-8 xl-colspan-2 m-gap-1 m-colspan-2 s-colspan-3">
