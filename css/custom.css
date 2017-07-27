@@ -183,6 +183,12 @@ h3 {
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
    border-radius: 0;
    border: none;
+   background-color: transparent;
+   margin: 15px;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+   padding: 0;
 }
 
 input {
@@ -284,6 +290,7 @@ fieldset {
    top: 0;
    display: block;
    width: 100%;
+   margin-top: 0;
 }
 
 .ui-tabs .ui-tabs-nav {

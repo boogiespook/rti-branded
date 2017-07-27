@@ -6,16 +6,40 @@
     <script src="raphael-2.1.4.min.js"></script>
     <script src="justgage.js"></script>
     <link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/grid.css"/>
+    <link rel="stylesheet" type="text/css" href="css/glyphicon.css"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
     <title>Ready to Innovate Assessment</title>
 <style media="all">
+/**
+ * ----------------------------------------------------------------
+ * Fonts import
+ * ----------------------------------------------------------------
+ **/
+
+@font-face {
+  font-family: "Overpass Bold";
+  src: url("../fonts/overpass_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/overpass_bold.woff") format("woff"), url("../fonts/overpass_bold.ttf") format("truetype"), url("../fonts/overpass_bold.svg#Overpass Bold") format("svg");
+}
+
+@font-face {
+  font-family: "Overpass Regular";
+  src: url("../fonts/overpass_regular.eot?#iefix") format("embedded-opentype"), url("../fonts/overpass_regular.woff") format("woff"), url("../fonts/overpass_regular.ttf") format("truetype"), url("../fonts/overpass_regular.svg#Overpass Regular") format("svg");
+}
+
+
+html,
+body {
+   font-family: "Overpass Regular", arial, helvetica, sans-serif;
+}
 
 body {
-    margin: 5px auto;
     width: 66.6%;
     font-family: 'overpass';
     font-size: 14px;
     color: #444;
-    width: 90%;
+    width: 100%;
 }
 
 #wrapper {
@@ -66,7 +90,7 @@ height: 50px;
 table {
     *border-collapse: collapse; /* IE7 and lower */
     border-spacing: 0;
-    width: 100%;    
+    width: 100%;
 }
 
 .bordered {
@@ -85,29 +109,28 @@ table {
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;     
+    transition: all 0.1s ease-in-out;
 }    
     
 .bordered td, .bordered th {
-    border-left: 1px solid #ccc;
+    border-left: 3px solid #fff;
     border-top: 1px solid #ccc;
     padding: 10px;
-    text-align: left;    
+
+
+}
+
+.bordered td{
+  background-color: #f0f0f0;
+  text-align: center;
+  border-bottom: 2px solid #fff;
 }
 
 .bordered th {
-    background-color: #dce9f9;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
-    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
-    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
-    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
-    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
-    border-top: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    background-color: #cc0000 !important;
+    color: #000;
+    text-align: center;
+    border-radius: 0 !important;
 }
 
 .bordered td:first-child, .bordered th:first-child {
@@ -144,7 +167,55 @@ table {
     border-radius: 0 0 6px 0;
 }
 
+.nav{
+  background-color: #000;
+  height: 60px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
+.header{
+         background-image: url(images/bg_ready.png);
+         background-size: cover;
+         background-repeat: no-repeat;
+         padding: 0 !important;
+         margin: 0 !important;
+         }
+         #slogan {
+         font-size: 45px;
+         font-weight: bold;
+         width: 100%;
+         max-width: 1090px;
+         margin: auto;
+         padding: 20px 30px 60px 0px;
+         color: #FFFFFF;
+         line-height: 45px;
+         text-align: left;
+         text-transform: uppercase;
+         white-space: nowrap;
+         }
+         @media (max-width: 808px){
+         #slogan{
+         font-size: 35px !important;
+         line-height: 35px;
+         }
+
+         }
+         @media (max-width: 521px){
+         #slogan{
+         font-size: 28px !important;
+         line-height: 28px;
+         }
+         }
+         @media (max-width: 400px){
+         #slogan{
+         font-size: 25px !important;
+         line-height: 25px;
+         }
+         .special-margin{
+            margin-bottom: 30px !important;
+         }
+         }
 
 /*----------------------*/
 
@@ -213,6 +284,17 @@ table {
     -moz-border-radius: 0 0 6px 6px;
     -webkit-border-radius: 0 0 6px 6px
     border-radius: 0 0 6px 6px
+}
+
+p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (max-width: 809px){
+  img{
+    width: 100%;
+  }
 }
   
 </style>
@@ -331,6 +413,26 @@ table {
 </head>
 
 <body>
+<div class="nav">
+  <div class="inner-wrapper">
+  <a class="navbar-brand" href="resultsOpen.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
+  </div>
+</div>
+
+<div class="grid header" style="margin-bottom: 50px;">
+         <div class="xl-colspan-12">
+            <div class="inner-wrapper">
+               <p style="color: #fff; font-size: 18px; margin-bottom: 0; padding-bottom: 0; line-height: 18px; margin-top: 35px; font-family: 'overpass';"><strong>RED HAT</strong><sup>&reg;</sup></p>
+               <p style="color: #fff; font-size: 25px; line-height: 25px; margin-top: 0; padding-top: 0; font-family: 'overpass';">SERVICES</p>
+               <div>
+                  <p id="slogan" style="font-family: 'overpass';">IS YOUR IT ORGANISATION<br />
+                     READY TO INNOVATE?
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+
 <?php
 ## Connect to the Database 
 include 'dbconnect.php';
@@ -351,58 +453,54 @@ foreach( $data_array as $var => $value )
 
 ?>
 
-<center>
-<img src="images/redHatTemplateHeader.jpg" alt="">
-<br><br><br><br>
+<div class="inner-wrapper">
 
 
-<div id="docTitle">
-Red Hat Ready to Innovate</div>
-<h2>Client Recommendations Document</h2>
-Prepared for <?php echo $data_array['client']; ?>
-<h3>Date: <?php echo date('l jS \of F Y') ?></h3>
+<p style="font-size: 20px; margin-top: 25px; font-weight: bold; font-family: 'overpass';">CLIENT RECOMMENDATIONS DOCUMENT</p>
+<p style="padding: 10px 0 !important;">Prepared for <?php echo $data_array['client']; ?></p>
+<p><span style="color: #cc0000; font-weight: bold; font-family: 'overpass';">DATE</span>: <?php echo date('l jS \of F Y') ?></p>
 
-</center>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Originator</p>
 
-<h3>Originator</h3>
+<p style="font-family: 'overpass';">Red Hat Consulting</p>
 
-<p>Red Hat Consulting</p>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Owner</p>
 
-<h3>Owner</h3>
+<p style="font-family: 'overpass';">Red Hat Consulting – Confidential (Restricted Distribution)</p>
 
-<p>Red Hat Consulting – Confidential (Restricted Distribution)</p>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Distribution</p>
 
-<h3>Distribution</h3>
+<p style="font-family: 'overpass';">Do not forward or copy without written permission.</p>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Confidentiality</p>
 
-<p>Do not forward or copy without written permission.</p>
-<h3>Confidentiality</h3>
+<p style="font-family: 'overpass';">This is a confidential document between Red Hat, Inc. and  <?php echo $_GET['name']; ?> (“Client”).</p>
+<p style="font-family: 'overpass';">All information supplied to the Client for the purpose of this project is to be considered Red Hat confidential.</p>
 
-<p>This is a confidential document between Red Hat, Inc. and  <?php echo $data_array['client']; ?> (“Client”).</p>
-<p>All information supplied to the Client for the purpose of this project is to be considered Red Hat confidential.</p>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Disclaimer</p>
 
-<h3>Disclaimer</h3>
-
-<p>This document is not a quote, and does not represent an official Statement of Work.  If acceptable, a formal quote can be issued, which will include a contract with the scope of work, cost, and any Client requirements if necessary.</p>
+<p style="font-family: 'overpass';">This document is not a quote, and does not represent an official Statement of Work.  If acceptable, a formal quote can be issued, which will include a contract with the scope of work, cost, and any Client requirements if necessary.</p>
 
 
 
 
-<h1>Red Hat Consulting Solution Delivery Framework</h1>
-<img src="images/image00.png" alt="Delivery Framework">
+<p style="font-size: 20px; text-transform: uppercase; font-weight: bold; color: #cc0000; padding: 25px 0 20px 0; font-family: 'overpass';">Red Hat Consulting Solution Delivery Framework</p>
+<p style="margin-bottom: 20px;"><img src="images/image00.png" alt="Delivery Framework"></p>
 <br>
-<p>Red Hat Consulting follows a repeatable framework for defining and implementing solutions with high value for our clients. That framework outlines a series of phases that each contribute to a clearly defined Client business driven goal. Red Hat Consulting aims to provide focused Client value across the areas of people, process, and technology, whilst also providing a supporting role in establishing bigger picture IT Transformation initiatives.</p>
+<p style="font-family: 'overpass';">Red Hat Consulting follows a repeatable framework for defining and implementing solutions with high value for our clients. That framework outlines a series of phases that each contribute to a clearly defined Client business driven goal. Red Hat Consulting aims to provide focused Client value across the areas of people, process, and technology, whilst also providing a supporting role in establishing bigger picture IT Transformation initiatives.</p>
  
-<p>Beginning with a Ready To Innovate Session, Red Hat helps you understand your As-Is IT Organisational State. The 5 axis of focus provide a way of outlining areas of accomplishment and improvement within the Operations and Development teams within your IT Organisation. The focus areas highlight the core foundations of Native Cloud platforms, Advanced Software Development techniques and most importantly Strategy and Culture. Used simply as a discussion point or more seriously as a means of highlighting future areas for investment, the RTI State graph represents a window into your Organisation. As part of the analysis Red Hat can guide and advise on follow up focus areas for investment and next steps. This short guide provides your custom next steps based on the wide base of Red Hat Consulting offerings available as part of our Service Delivery Framework.
+<p style="font-family: 'overpass';">Beginning with a Ready To Innovate Session, Red Hat helps you understand your As-Is IT Organisational State. The 5 axis of focus provide a way of outlining areas of accomplishment and improvement within the Operations and Development teams within your IT Organisation. The focus areas highlight the core foundations of Native Cloud platforms, Advanced Software Development techniques and most importantly Strategy and Culture. Used simply as a discussion point or more seriously as a means of highlighting future areas for investment, the RTI State graph represents a window into your Organisation. As part of the analysis Red Hat can guide and advise on follow up focus areas for investment and next steps. This short guide provides your custom next steps based on the wide base of Red Hat Consulting offerings available as part of our Service Delivery Framework.</p>
+<p style="font-family: 'overpass';">
 Following the RTI session, the next steps are defined within the follow on focused Discover phase, a focused “Discovery Session” aligned with an RTI defined topic provides an opportunity to drive into a defined area of investment in more detail, mapping business requirements, defining IT Organisational initiatives and engagement areas and assisting with strategy and approach. The Discovery Session is the starting point of a Red Hat Consulting engagement. The following report proposes your custom Discovery Session next steps based on your RTI State graph and chosen areas of IT investment.</p>
  
-<p>In the Design phase, we employ interactive workshops to rough out technologies, processes, and architectures; establish a strategy for your solution that integrates people, process, and technology; and build a backlog of tasks or use cases for prioritization. During the Deploy phase, we deliver 1 or more sprints or engagements to realize all or a portion of that strategy then deploy it within your environment.
+<p style="font-family: 'overpass';">In the Design phase, we employ interactive workshops to rough out technologies, processes, and architectures; establish a strategy for your solution that integrates people, process, and technology; and build a backlog of tasks or use cases for prioritization. During the Deploy phase, we deliver 1 or more sprints or engagements to realize all or a portion of that strategy then deploy it within your environment.</p>
+<p style="font-family: 'overpass';">
 The Operate phase ensures that your Organisation is able to realise the true value of the Red Hat Consulting solution and technology. Critical to the ongoing maturity of your IT Organisation, Red Hat Consulting provide strategic partners to assist you in realising the value of our Open Source solutions and technologies.</p>
 
-<p>The RTI driven Discover, Design, Deploy, Operate solution progression is complemented by our unique mentoring and collaboration approach as well as Red Hat Training offerings to better engage and accelerate client participation, uptake, and success. Finally, we do all of this within an iterative framework that builds on prior efforts to evolve capabilities alongside your business or to deliver complex, multi-technology solutions.</p>
+<p style="font-family: 'overpass';">The RTI driven Discover, Design, Deploy, Operate solution progression is complemented by our unique mentoring and collaboration approach as well as Red Hat Training offerings to better engage and accelerate client participation, uptake, and success. Finally, we do all of this within an iterative framework that builds on prior efforts to evolve capabilities alongside your business or to deliver complex, multi-technology solutions.</p>
 
 
-<h1>RTI Output Summary</h1>
-<p>The spider chart below shows the levels attained by <?php echo $data_array['client']; ?> during the Ready To Innovate Assessment:
+<p style="font-size: 20px; text-transform: uppercase; font-weight: bold; color: #cc0000; padding: 25px 0 20px 0; font-family: 'overpass';">RTI Output Summary</p>
+<p style="font-family: 'overpass';">The spider chart below shows the levels attained by <?php echo $_GET['name']; ?> during the Ready To Innovate Assessment:
 
 
 <?php  
@@ -517,11 +615,11 @@ var data = {
   labels: ["Automation", "Methodology", "Architecture", "Strategy", "Environment"],
   datasets: [{
     label: customerName,
-    backgroundColor: "rgba(53, 177, 94, 1)",
+    backgroundColor: "rgba(204, 0, 0, 1)",
     data: [d1, d2, d3, d4, d5]
   }, {
     label: "Average",
-    backgroundColor: "rgba(177, 177, 53, 1)",
+    backgroundColor: "rgba(0, 0, 0, 1)",
     data: <?php 
     $qq = "select avg(d1) as d1,avg(d2) as d2, avg(d3) as d3, avg(d4) as d4, avg(d5) as d5 from data;";    
     $res = mysqli_query($GLOBALS["___mysqli_ston"], $qq);
@@ -558,11 +656,11 @@ var dataOps = {
   labels: ["Automation", "Methodology", "Architecture", "Strategy", "Environment"],
   datasets: [{
     label: customerName,
-    backgroundColor: "rgba(53, 177, 94, 1)",
+    backgroundColor: "rgba(204, 0, 0, 1)",
     data: [o1, o2, o3, o4, o5]
   }, {
     label: "Average",
-    backgroundColor: "rgba(177, 177, 53, 1)",
+    backgroundColor: "rgba(0, 0, 0, 1)",
     data: <?php 
     $qq = "select avg(o1) as d1,avg(o2) as d2, avg(o3) as d3, avg(o4) as d4, avg(o5) as d5 from data;";    
     $res = mysqli_query($GLOBALS["___mysqli_ston"], $qq);
@@ -608,9 +706,9 @@ var myBarChart2 = new Chart(ctx2, {
                    <table class="bordered">
     <thead>
     <tr>
-        <th>Area</th>        
-        <th>Development Rating</th>
-        <th>Operations Rating</th>
+        <th style="font-family: 'overpass'; color: #fff;">AREA</th>        
+        <th style="font-family: 'overpass'; color: #fff;">DEVELOPMENT RATING</th>
+        <th style="font-family: 'overpass'; color: #fff;">OPERATIONS RATING</th>
     </tr>
     </thead>
 <?php
@@ -1004,15 +1102,15 @@ array_push($workshops,$workshopLinks['OSEP']);
 </div>
 
 
+<<div class="inner-wrapper">
 
-<h1>Automated Analysis</h1>
-<br>
+<p style="font-size: 20px; text-transform: uppercase; font-weight: bold; color: #cc0000; padding: 25px 0 20px 0; font-family: 'overpass';">Automated Analysis</p>
                    <table class="bordered">
     <thead>
     <tr>
-        <th>ID</th>
-        <th>Analysis</th>
-        <th>Recommendations</th>
+        <th style="font-family: 'overpass'; color: #fff;">ID</th>
+        <th style="font-family: 'overpass'; color: #fff;">ANALYSIS</th>
+        <th style="font-family: 'overpass'; color: #fff;">RECOMMENDATIONS</th>
     </tr>
     </thead>
     <tbody>
@@ -1028,13 +1126,13 @@ $i++;
 
 
 
-<h1>Main Areas for Consideration</h1>
+<p style="font-size: 20px; text-transform: uppercase; font-weight: bold; color: #cc0000; padding: 25px 0 20px 0; font-family: 'overpass';">Main Areas for Consideration</p>
     <table class="bordered">
     <thead>
     <tr>
-    	  <th>Timescale</th>
-        <th>Development Team</th>        
-        <th>Operations Team</th>        
+    	  <th style="font-family: 'overpass'; color: #fff;">TIMESCALE</th>
+        <th style="font-family: 'overpass'; color: #fff;">DEVELOPMENT TEAM</th>        
+        <th style="font-family: 'overpass'; color: #fff;">OPERATIONS TEAM</th>        
     </tr>
     </thead>
 <tbody>
@@ -1085,8 +1183,8 @@ echo "<tr><td>$timeScales[$i]</td><td><b>$top3Dev[$i]</b><br>" . $allWorkshops['
     <table class="bordered">
     <thead>
     <tr>
-    	  <th>ID</th>
-        <th>Workshops</th>        
+    	  <th style="font-family: 'overpass'; color: #fff;">ID</th>
+        <th style="font-family: 'overpass'; color: #fff;">WORKSHOPS</th>        
     </tr>
     </thead>
 <tbody>
@@ -1101,17 +1199,19 @@ $i++;
 </table>
 
 
-
+</div>
 </div>
 
 
 
-<h1>Comparison with others</h1>
-<p>Some words about comparisons</p>
-<h2>Development</h2>
+<div class="inner-wrapper">
+
+<p style="font-size: 20px; text-transform: uppercase; font-weight: bold; color: #cc0000; padding: 25px 0 20px 0; margin-top: 25px; font-family: 'overpass';">Comparison with others</p>
+<p style="font-family: 'overpass';">Some words about comparisons</p>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Development</p>
 <canvas id="myChartDev"></canvas>
 
-<h2>Operations</h2>
+<p style="text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 20px 0 0 0; font-family: 'overpass';">Operations</p>
 <canvas id="myChartOps"></canvas>
 
 

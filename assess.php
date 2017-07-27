@@ -5,66 +5,66 @@
 <html>
    <head>
       <title>Ready to Innovate?</title>
-      <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-      <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-      <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-      <link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css"/>
+      <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" type="text/css" href="css/datatables.min.css">
+      <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" type="text/css">
+      <link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css">
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" type="text/css" href="css/grid.css">
-      <link rel="stylesheet" type="text/css" href="css/custom.css">
       <link rel="stylesheet" type="text/css" href="css/glyphicon.css">
-      <!--  <script src="js/jquery-1.10.2.js"></script>-->
-      <link rel="stylesheet" href="/resources/demos/style.css">
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <!--    <script src="js/jquery-1.10.2.js"></script>-->
+      <link rel="stylesheet" href="/resources/demos/style.css" type="text/css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
       <script type="text/javascript">
-          $( function() {
+         $( function() {
          $( ".tabs" ).tabs();
-
+         
          var max = 4;
-
+         
          if ( $('#tabs-next').length ) {
-             var selected = $(".tabs").tabs("option", "active");
-             
-             if ( selected < max ) {
-            $('#tabs-next').html('<a href="#" class="button">Next</a>');
-             } else {
-            $('#tabs-next').empty();
-             }
+          var selected = $(".tabs").tabs("option", "active");
+          
+          if ( selected < max ) {
+         $('#tabs-next').html('<a href="#" class="button">Next</a>');
+          } else {
+         $('#tabs-next').empty();
+          }
          }
          
          $('.tabs li').bind('click', function() {
-             var selected = $(".tabs").tabs("option", "active");
-
-             if ( selected < max ) {
-            $('#tabs-next').html('<a href="#" class="button">Next</a>');
-             } else {
-            $('#tabs-next').empty();
-             }
+          var selected = $(".tabs").tabs("option", "active");
+         
+          if ( selected < max ) {
+         $('#tabs-next').html('<a href="#" class="button">Next</a>');
+          } else {
+         $('#tabs-next').empty();
+          }
          });
-
+         
          $('#tabs-next').bind('click', function() {
-             var selected = $(".tabs").tabs("option", "active");
-
-             if ( (selected + 1) < max ) {
-            $('.tabs').tabs('option', 'active', selected + 1);
-            $('#tabs-next').html('<a href="#" class="button">Next</a>');
-             } else {
-            $('#tabs-next').empty();
-             }
-
-             $('.tabs').tabs('option', 'active', selected + 1);
+          var selected = $(".tabs").tabs("option", "active");
+         
+          if ( (selected + 1) < max ) {
+         $('.tabs').tabs('option', 'active', selected + 1);
+         $('#tabs-next').html('<a href="#" class="button">Next</a>');
+          } else {
+         $('#tabs-next').empty();
+          }
+         
+          $('.tabs').tabs('option', 'active', selected + 1);
          });
-          });
+         });
       </script>
-      <script>
+      <script type="text/javascript">
          $( function() {
-           $( "#region" ).selectmenu();
-         } );
+          $( "#region" ).selectmenu();
+          } );
+          
       </script>
-      <script>
+      <script type="text/javascript">
          function validateForm() {
              var x = document.forms["myForm"]["rhEmail"].value;
              var atpos = x.indexOf("@");
@@ -72,537 +72,587 @@
              var re = /\S+@redhat.com/;
          
              if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-         //    if (! x.match(re) ) {
-                 alert("Not a valid e-mail address");
-                 return false;
+             //    if (! x.match(re) ) {
+          alert("Not a valid e-mail address");
+          return false;
              }
          }
       </script>
-      <script>
+      <script type="text/javascript">
          $( function() {
-           $( "input" ).checkboxradio();
-         } );
+             if ( $('input').length ) {
+          $( "input" ).checkboxradio();
+             }
+         });
+         
+          
       </script>
+      <style type="text/css">
+         /**
+         * ----------------------------------------------------------------
+         * Fonts import
+         * ----------------------------------------------------------------
+         **/
+         @font-face {
+         font-family: "Overpass Bold";
+         src: url("fonts/overpass_bold.eot?#iefix") format("embedded-opentype"), url("fonts/overpass_bold.woff") format("woff"), url("fonts/overpass_bold.ttf") format("truetype"), url("fonts/overpass_bold.svg#Overpass Bold") format("svg");
+         }
+         @font-face {
+         font-family: "Overpass Regular";
+         src: url("fonts/overpass_regular.eot?#iefix") format("embedded-opentype"), url("fonts/overpass_regular.woff") format("woff"), url("fonts/overpass_regular.ttf") format("truetype"), url("fonts/overpass_regular.svg#Overpass Regular") format("svg");
+         }
+         html,
+         body {
+         font-family: "Overpass Regular", arial, helvetica, sans-serif;
+         }
+         #locationField, #controls {
+         position: relative;
+         width: 480px;
+         }
+         #autocomplete {
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         width: 99%;
+         }
+         .label {
+         text-align: right;
+         font-weight: bold;
+         color: #303030;
+         }
+         #address {
+         border: 1px solid #000090;
+         background-color: #f0f0ff;
+         width: 480px;
+         padding-right: 2px;
+         }
+         #address td {
+         font-size: 10pt;
+         }
+         .field {
+         width: 99%;
+         }
+         .slimField {
+         width: 80px;
+         }
+         .wideField {
+         width: 200px;
+         }
+         #locationField {
+         height: 20px;
+         margin-bottom: 2px;
+         }
+         .page { position: absolute; 
+         top: 10; 
+         left: 100; 
+         visibility: hidden; 
+         } 
+         legend {
+         }
+         p { font-family: 'overpass', sans-serif; line-height: 18px; font-size: 16px; margin-bottom: 10px; color: #000; }
+         input {
+         border-radius: 15px;
+         margin: 10px;
+         }  
+         h3 { color: #7c795d; font-family: 'overpass', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+         .header{
+         background-image: url(images/bg_ready.png);
+         background-size: cover;
+         background-repeat: no-repeat;
+         padding: 0 !important;
+         margin: 0 !important;
+         }
+         #slogan {
+         font-size: 45px;
+         font-weight: bold;
+         width: 100%;
+         max-width: 1090px;
+         margin: auto;
+         padding: 20px 30px 60px 0px;
+         color: #FFFFFF;
+         line-height: 45px;
+         text-align: left;
+         text-transform: uppercase;
+         white-space: nowrap;
+         }
+         @media (max-width: 808px){
+         #slogan{
+         font-size: 35px !important;
+         line-height: 35px;
+         }
+         }
+         @media (max-width: 521px){
+         #slogan{
+         font-size: 28px !important;
+         line-height: 28px;
+         }
+         }
+         @media (max-width: 400px){
+         #slogan{
+         font-size: 25px !important;
+         line-height: 25px;
+         }
+         .special-margin{
+         margin-bottom: 40px !important;
+         }
+         }
+         .ui-widget-content{
+         border: 0!important;
+         background-color: transparent;
+         margin-top: 20px;
+         }
+         .ui-widget-header{
+         background-color: transparent;
+         border: none;
+         }
+         .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{
+         border: none;
+         }
+         .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+         color: #FFF;
+         }
+         .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+         border-radius: 0;
+         border: none;
+         }
+         input {
+         border-radius: 0;
+         background-color: #cc0000;
+         border: 1px solid #000;
+         color: #fff;
+         }
+         .nav-submit{
+         border: 0;
+         text-decoration: none;
+         background-color: #cc0000;
+         margin: 0 0 0 0;
+         padding: 10px;
+         }
+         .ui-tabs .ui-tabs-nav{
+         margin: 20px 0 20px 0;
+         padding: 0;
+         }
+         .w3-label{
+         color: #000;
+         }
+         legend{
+         border-bottom: none;
+         }
+         .ui-tabs .ui-tabs-nav li {
+         margin: 10px 10px 0 0;
+         }
+         label{
+         display: block !important;
+         padding-left: 25px;
+         font-weight: 400;
+         }
+         input[type=checkbox].w3-check, input[type=radio].w3-radio {
+         float: left;
+         position: relative;
+         top: 0;
+         margin: 0;
+         padding: 0;
+         }
+         .navbar-right {
+         position: relative;
+         z-index: 10;
+         }
+         .form-group{
+         padding: 0;
+         margin: 0;
+         }
+         a:focus {
+         outline: none;
+         margin: 0 !important;
+         }
+         nav{
+         padding: 0!important;
+         margin: 0!important;
+         border: 0!important;
+         }
+         fieldset{
+         margin-bottom: 20px;
+         margin-right: 10px;
+         border: none;
+         }
+         .navigation-point{
+         .font-weight: lighter;
+         }
+         #ui-id-1:active{
+         color: #cc0000;
+         }
+         .ui-tabs {
+         font-size: 15px;
+         position: absolute;
+         top: 0;
+         display: block;
+         width: 100%;
+         }
+         .ui-tabs .ui-tabs-nav {
+         margin: 0;
+         }
+         .navbar-nav>li {
+         float: left;
+         }
+         #tabs-contents {
+         margin: 258px calc((100% - 1024px) / 2) 0 0;
+         }
+         @media (max-width: 1064px){
+         }
+         @media (max-width: 991px){
+         }
+         .navbar-text{
+         margin-top: 25px !important;
+         }
+         @media (max-width: 808px){
+         .ui-tabs {
+         position: relative;
+         }
+         #tabs-contents{
+         margin: 0 0 100px 0;
+         }
+         #tabs-contents.inner-wrapper {
+         margin-left: calc((100% - 480px) / 2);
+         max-width: 480px;
+         }
+         #main-content.inner-wrapper {
+         margin: 0;
+         width: 100%;
+         padding: 0;
+         max-width: inherit;
+         }
+         .ui-tabs .ui-tabs-tab {
+         display: block;
+         width: 100% ;
+         background: rgba(0, 0, 0, 1) !important;
+         padding: 15px 0 10px 50px !important;
+         }
+         .ui-widget-content {
+         margin: 0;
+         padding: 0;
+         }
+         }
+         @media (max-width: 520px) {
+         #tabs-contents.inner-wrapper {
+         margin-left: calc((100% - 320px) / 2);
+         max-width: 320px;
+         }
+         }
+         @media (max-width: 360px) {
+         .inner-wrapper {
+         margin-left: calc((100% - 280px) / 2);
+         max-width: 280px;
+         }
+         }
+         #ui-id-1:after {
+         content: '';
+         display: block;
+         border-bottom: 4px solid rgba(255, 255, 255, 1);
+         width: 32px;
+         }
+         #ui-id-1:hover:after, #ui-id-1 a.active:after {
+         border-bottom: 4px solid rgba(204, 0, 0, 1);
+         }
+         #ui-id-2:after {
+         content: '';
+         display: block;
+         border-bottom: 4px solid rgba(255, 255, 255, 1);
+         width: 32px;
+         }
+         #ui-id-2:hover:after, #ui-id-2 a.active:after {
+         border-bottom: 4px solid rgba(204, 0, 0, 1);
+         }
+         #ui-id-3:after {
+         content: '';
+         display: block;
+         border-bottom: 4px solid rgba(255, 255, 255, 1);
+         width: 32px;
+         }
+         #ui-id-3:hover:after, #ui-id-3 a.active:after {
+         border-bottom: 4px solid rgba(204, 0, 0, 1);
+         }
+         #ui-id-4:after {
+         content: '';
+         display: block;
+         border-bottom: 4px solid rgba(255, 255, 255, 1);
+         width: 32px;
+         }
+         #ui-id-4:hover:after, #ui-id-4 a.active:after {
+         border-bottom: 4px solid rgba(204, 0, 0, 1);
+         }
+         #ui-id-5:after {
+         content: '';
+         display: block;
+         border-bottom: 4px solid rgba(255, 255, 255, 1);
+         width: 32px;
+         }
+         #ui-id-5:hover:after, #ui-id-5 a.active:after {
+         border-bottom: 4px solid rgba(204, 0, 0, 1);
+         }
+         .ui-state-active a:after{
+         border-bottom: 4px solid rgba(204, 0, 0, 1) !important; 
+         }
+         @media (max-width: 808px){
+         .wrapper-nav{
+         padding: 20px;
+         }
+         }
+         .ui-tabs .ui-tabs-panel{
+         padding: 0 !important;
+         }
+         #tabs-1{
+         margin-top: 50px;
+         margin-bottom: 15px;
+         }
+         #tabs-2{
+         margin-top: 50px;
+         margin-bottom: 15px;
+         }
+         #tabs-3{
+         margin-top: 50px;
+         margin-bottom: 15px;
+         }
+         #tabs-4{
+         margin-top: 50px;
+         margin-bottom: 15px;
+         }
+         #tabs-5{
+         margin-top: 50px;
+         margin-bottom: 15px;
+         }
+         footer{
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         color: #fff;
+         }
+         footer ul{margin: 0; padding: 0;}
+         footer li{
+         float: left;
+         list-style-type: none;
+         }
+         footer li a{
+         color: #cc0000;
+         font-size: 10px;
+         text-decoration: none;
+         border: 0;
+         margin-bottom: 15px !important;
+         }
+         footer li a:hover{
+         color: #cc0000 !important;
+         border-bottom: 1px solid #cc0000 !important;
+         }
+         @media (max-width: 520px){
+         footer li a{
+         font-size: 8px;
+         }
+         }
+         .button{
+         border: 0 !important;
+         text-decoration: none !important;
+         background-color: #cc0000;
+         margin: 0 0 0 0;
+         padding: 10px 20px;
+         font-family: 'overpass';
+         font-weight: bold;
+         color: #fff !important;
+         font-size: 15px;
+         text-transform: uppercase;
+         }
+      </style>
    </head>
    <body>
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default" role="navigation" style="background-color: #000; height: 60px; border-radius: 0;">
          <div class="container-fluid">
             <div class="inner-wrapper">
                <div class="navbar-header grid">
                   <div class="xl-colspan-2 m-colspan-10 s-colspan-9">
-                      <a class="navbar-brand" href="index.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
+                     <a class="navbar-brand" href="index.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
                   </div>
-
                   <div class="xl-gap-8 xl-colspan-2 m-gap-1 m-colspan-2 s-colspan-3">
-                     <div class="collapse navbar-collapse" id="navbar1">
-                        <ul class="nav navbar-nav navbar-right">
-                           <?php if (isset($_SESSION['usr_id'])) { ?>
-                           <li><a href="#">Signed in as <?php echo $_SESSION['usr_name']; ?></a></li>
-                           <li><a href="passwd.php">Change Password</a></li>
-                           <li><a href="logout.php">Log Out</a></li>
-                           <!--<li><a href="blog">Blog</a></li>-->
-                           <?php } else { ?>
-                           <li><a href="login.php" title="Login" alt="Login"><span class="glyphicon glyphicon-log-in" style="margin-top: 5px; color: #fff;"></span></a></li>
-                           <li class="active"><a href="register.php" title="Register" alt="Register"><span class="glyphicon glyphicon-user" style="margin-top: 5px; color: #fff;"></span></a></li>
-                           <?php } ?>
-                        </ul>
-                     </div>
+                     <!--
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        -->
+                     <ul class="nav navbar-nav navbar-right">
+                        <?php if (isset($_SESSION['usr_id'])) { ?><!--<li><p class="navbar-text" style="color: #fff; margin-top: 20px;"><?php echo $_SESSION['usr_name']; ?></p></li>-->
+                        <li><a href="logout.php" title="Logout" alt="Logout"></a></li>
+                        <li><a href="http://ready-to-innovate.com/blog/" target="_blank" title="Blog" alt="Blog" style="color: #fff;"></a></li>
+                        <?php } else { ?>
+                        <li><a href="login.php" title="Login" alt="Login"></a></li>
+                        <li><a href="register.php" title="Register" alt="Register" style="color: #fff;"></a></li>
+                        <?php } ?>
+                     </ul>
                   </div>
-                  <!--
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  </button>
-                  -->
-                  <!--
-                  <a class="navbar-brand" href="index.php"><img src="images/innovate.png">  Ready to Innovate?</a>
-                  -->
                </div>
             </div>
          </div>
       </nav>
       <div class="grid header" style="margin-bottom: 50px;">
-          <div class="xl-colspan-12">
+         <div class="xl-colspan-12">
             <div class="inner-wrapper">
-              <p style="color: #fff; font-size: 18px; margin-bottom: 0; padding-bottom: 0; line-height: 18px; margin-top: 35px; font-family: 'overpass';"><strong>RED HAT</strong><sup>&#174;</sup></p>
-
-              <p style="color: #fff; font-size: 25px; line-height: 25px; margin-top: 0; padding-top: 0; font-family: 'overpass';">SERVICES</p>
-
-              <div>
-                <p id="slogan" style="font-family: 'overpass';">IS YOUR IT ORGANISATION<br>
-                READY TO INNOVATE?</p>
-              </div>
+               <p style="color: #fff; font-size: 18px; margin-bottom: 0; padding-bottom: 0; line-height: 18px; margin-top: 35px; font-family: 'overpass';"><strong>RED HAT</strong><sup>&#174;</sup></p>
+               <p style="color: #fff; font-size: 25px; line-height: 25px; margin-top: 0; padding-top: 0; font-family: 'overpass';">SERVICES</p>
+               <div>
+                  <p id="slogan" style="font-family: 'overpass';">IS YOUR IT ORGANISATION<br>
+                     READY TO INNOVATE?
+                  </p>
+               </div>
             </div>
-          </div>
+         </div>
       </div>
       <?php
          if(isset($_SESSION['usr_id'])) {
          include 'dbconnect.php';
          $userId = $_SESSION['usr_id'];
+         
          ?>
-      <div class="container">
+      <div id="main-content" class="inner-wrapper">
          <!-- Main component for a primary marketing message or call to action -->
          <!--      <div class="jumbotron"> -->
-         <form name="myForm" id="innovate-form" action="tmp.php"  class="w3-container">
-            <div id="tabs">
+         <form name="myForm" id="innovate-form" action="results.php">
+            <div class="tabs">
                <div class="grid">
                   <div class="xl-gap-3 xl-colspan-8 m-gap-1 m-colspan-12">
                      <ul>
-                        <?php
-                           $i = 1;
-                           $areas = array("Introduction","Details","Automation","Methodology","Architecture","Strategy","Environment");
-                           foreach ($areas as $area) {
-                            print "<li><a href=\"#tabs-" . $i . "\">$area</a></li>";
-                            $i++;   
-                           }
-                           ?>
-                        <li><input type="submit" value="Submit"></li>
+                        <!--<li><a href="#tabs-1" style="margin-left: -2px;">INTRODUCTION</a></li>
+                           <li><a href="#tabs-2" style="margin-left: 1px;">CLIENT DETAILS</a></li>-->
+                        <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a href="#tabs-1" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;" class="active">Automation</a></li>
+                        <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-2" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Methodology</a></li>
+                        <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-3" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Architecture</a></li>
+                        <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-4" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Strategy</a></li>
+                        <li class="navigation-point" style="background-color: transparent; margin: 0; padding: 0;"><a class="active" href="#tabs-5" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter; padding-bottom: 10px;">Resources</a></li>
                      </ul>
                   </div>
                </div>
-               
                <div id="tabs-contents" class="inner-wrapper">
                   <div class="grid">
                      <div class="xl-colspan-11">
                         <div id="tabs-1">
-                           <div class="widget">
-                              <div class="grid">
-                                 <div class="xl-colspan-6 l-colspan-12">
+                           <div class="widget"> 
+                              <?php
+                                 function createQuestions($number,$area) {
+                                    $string = file_get_contents("questions.json");
+                                    $json = json_decode($string, true);
+                                    
+                                    $automation_dev_array = $json['development']['automation'];
+                                    $automation_ops_array = $json['operations']['automation'];
+                                    $methodology_dev_array = $json['development']['methodology'];
+                                    $methodology_ops_array = $json['operations']['methodology'];
+                                    $architecture_dev_array = $json['development']['architecture'];
+                                    $architecture_ops_array = $json['operations']['architecture'];
+                                    $strategy_dev_array = $json['development']['strategy'];
+                                    $strategy_ops_array = $json['operations']['strategy'];
+                                    $environment_dev_array = $json['development']['environment'];
+                                    $environment_ops_array = $json['operations']['environment'];  
+                                    $i=0;
+                                    print '<div class="grid"><div class="xl-colspan-6 m-colspan-12 left-block"><fieldset><legend><strong>Development</strong></legend>';
 
-                                       
+                                    while( $i < 5) {
+                                       if ($i == 0) {
+                                          $ii = $i + 1;
+                                          $check = "checked";
+                                       } else {
+                                          $check = "";
+                                       }
+                                       print "<input class=\"w3-radio\" type=\"radio\" name=\"d" . $number . "\" id=\"radio-1\" value=\"$i\" $check> <label>" . $json['development'][$area][$i] . "</label><br>";
+                                       $i++;
+                                    }
 
+                                    print ' </fieldset></div>';
+                                    
+                                    
+                                    # Rinse and repeat for Ops
+                                    $i=0;
+                                    print  ' <div class="xl-colspan-6 m-colspan-12 right-block"><fieldset>
+                                        <legend><strong>Operations</strong></legend>';
+                                    
+                                    while( $i < 5) {
+                                       $ii = $i + 1;
+                                       if ($i == 0) {
+                                          $check = "checked";
+                                          } else {
+                                          $check = "";
+                                       }
+                                       print "<input class=\"w3-radio\" type=\"radio\" name=\"o" . $number . "\" id=\"radio-1\" value=\"$i\" $check> <label>" . $json['operations'][$area][$i] . "</label><br>";
+                                       $i++;
+                                    }
 
+                                    print "  </fieldset></div></div>";
+                                 }
 
-                                 </div>
-                              </div>
+                                 # End of Function
+      
+                                 createQuestions("1","automation");
+                                 ?>    
                            </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
+                        <div id="tabs-2">
+                           <?php
+                              createQuestions(2,"methodology");
+                              ?> 
+                        </div>
+                        <div id="tabs-3">
+                           <?php
+                              createQuestions(3,"architecture");
+                              ?> 
+                        </div>
+                        <div id="tabs-4">
+                           <?php
+                              createQuestions(4,"strategy");
+                              ?> 
+                        </div>
+                        <div id="tabs-5">
+                           <?php
+                              createQuestions(5,"environment");
+                              ?>
+                           <input type="submit" value="SUBMIT" class="nav-submit" style="padding: 10px 20px; font-family: 'overpass'; font-weight: bold;">
+                        </div>
                      </div>
                   </div>
-               </div>
-
-
-
-
-
-
-
-
-
-
-<!--          
-<h3>Welcome to the "Ready to Innovate?" Assessment.</h3>
-<p>
-<b>AIM</b>: To understand the wider issues around PaaS / DevOps adoption; what will make it successful or why has it stalled.  In parallel with technical PoCs or pilots.
-</p>
-<p>
-By the end of this assessment you will:
-<ul>
-<li>    Understand the wider issues around Platform-as-a-Service and DevOps adoption in parallel with technical PoCs or pilots.
-<li>
-Understand the maturity of your organization across five outlined areas of interest:
-<ul>
-<li>Automation
-<li>Methodology
-<li>Architecture
-<li>Strategy
-<li>Environment
-</ul>
-<li>Walk away with next steps and recommended follow-up sessions from Red Hat Consulting to dive deep into the challenges and opportunities that face your business.
-</ul>
-<br>
-<p>To complete the assessment, please use the tabs moving from left to right.  Once complete, click "Submit".</p>
--->
-
-
-
-
-               <div id="tabs-2">
-                  <label class="w3-label w3-validate">Client Name</label>
-                  <input class="w3-input" name="customerName" type="text" required>
-                  <br>
-                  <label class="w3-label w3-validate" >Email Address</label>    
-                  <input onfocusout="validateForm()" class="w3-input" name="rhEmail"  type="text" required>
-                  <br>
-                  <input type="hidden" name="userId" value="<?php echo $_SESSION['usr_id']; ?>">
-                  <fieldset>
-                     <label for="country">Country</label>
-                     <select name="country" id="country">
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="United States of America">United States of America</option>
-                        <option value="Afganistan">Afghanistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="American Samoa">American Samoa</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="Anguilla">Anguilla</option>
-                        <option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belarus">Belarus</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Belize">Belize</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bermuda">Bermuda</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Bonaire">Bonaire</option>
-                        <option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option>
-                        <option value="Botswana">Botswana</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
-                        <option value="Brunei">Brunei</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="Burkina Faso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Cameroon">Cameroon</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Canary Islands">Canary Islands</option>
-                        <option value="Cape Verde">Cape Verde</option>
-                        <option value="Cayman Islands">Cayman Islands</option>
-                        <option value="Central African Republic">Central African Republic</option>
-                        <option value="Chad">Chad</option>
-                        <option value="Channel Islands">Channel Islands</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Christmas Island">Christmas Island</option>
-                        <option value="Cocos Island">Cocos Island</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Comoros">Comoros</option>
-                        <option value="Congo">Congo</option>
-                        <option value="Cook Islands">Cook Islands</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Cote DIvoire">Cote D'Ivoire</option>
-                        <option value="Croatia">Croatia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Curaco">Curacao</option>
-                        <option value="Cyprus">Cyprus</option>
-                        <option value="Czech Republic">Czech Republic</option>
-                        <option value="Denmark">Denmark</option>
-                        <option value="Djibouti">Djibouti</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Dominican Republic">Dominican Republic</option>
-                        <option value="East Timor">East Timor</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Equatorial Guinea">Equatorial Guinea</option>
-                        <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Ethiopia">Ethiopia</option>
-                        <option value="Falkland Islands">Falkland Islands</option>
-                        <option value="Faroe Islands">Faroe Islands</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="Finland">Finland</option>
-                        <option value="France">France</option>
-                        <option value="French Guiana">French Guiana</option>
-                        <option value="French Polynesia">French Polynesia</option>
-                        <option value="French Southern Ter">French Southern Ter</option>
-                        <option value="Gabon">Gabon</option>
-                        <option value="Gambia">Gambia</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Gibraltar">Gibraltar</option>
-                        <option value="Great Britain">Great Britain</option>
-                        <option value="Greece">Greece</option>
-                        <option value="Greenland">Greenland</option>
-                        <option value="Grenada">Grenada</option>
-                        <option value="Guadeloupe">Guadeloupe</option>
-                        <option value="Guam">Guam</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Guinea">Guinea</option>
-                        <option value="Guyana">Guyana</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Hong Kong">Hong Kong</option>
-                        <option value="Hungary">Hungary</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Iraq">Iraq</option>
-                        <option value="Ireland">Ireland</option>
-                        <option value="Isle of Man">Isle of Man</option>
-                        <option value="Israel">Israel</option>
-                        <option value="Italy">Italy</option>
-                        <option value="Jamaica">Jamaica</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Jordan">Jordan</option>
-                        <option value="Kazakhstan">Kazakhstan</option>
-                        <option value="Kenya">Kenya</option>
-                        <option value="Kiribati">Kiribati</option>
-                        <option value="Korea North">Korea North</option>
-                        <option value="Korea Sout">Korea South</option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                        <option value="Laos">Laos</option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="Lesotho">Lesotho</option>
-                        <option value="Liberia">Liberia</option>
-                        <option value="Libya">Libya</option>
-                        <option value="Liechtenstein">Liechtenstein</option>
-                        <option value="Lithuania">Lithuania</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Macau">Macau</option>
-                        <option value="Macedonia">Macedonia</option>
-                        <option value="Madagascar">Madagascar</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Malawi">Malawi</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Mali">Mali</option>
-                        <option value="Malta">Malta</option>
-                        <option value="Marshall Islands">Marshall Islands</option>
-                        <option value="Martinique">Martinique</option>
-                        <option value="Mauritania">Mauritania</option>
-                        <option value="Mauritius">Mauritius</option>
-                        <option value="Mayotte">Mayotte</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Midway Islands">Midway Islands</option>
-                        <option value="Moldova">Moldova</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montserrat">Montserrat</option>
-                        <option value="Morocco">Morocco</option>
-                        <option value="Mozambique">Mozambique</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Nambia">Nambia</option>
-                        <option value="Nauru">Nauru</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="Netherland Antilles">Netherland Antilles</option>
-                        <option value="Netherlands">Netherlands (Holland, Europe)</option>
-                        <option value="Nevis">Nevis</option>
-                        <option value="New Caledonia">New Caledonia</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Nicaragua">Nicaragua</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Niue">Niue</option>
-                        <option value="Norfolk Island">Norfolk Island</option>
-                        <option value="Norway">Norway</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palau Island">Palau Island</option>
-                        <option value="Palestine">Palestine</option>
-                        <option value="Panama">Panama</option>
-                        <option value="Papua New Guinea">Papua New Guinea</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Phillipines">Philippines</option>
-                        <option value="Pitcairn Island">Pitcairn Island</option>
-                        <option value="Poland">Poland</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Puerto Rico">Puerto Rico</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="Republic of Montenegro">Republic of Montenegro</option>
-                        <option value="Republic of Serbia">Republic of Serbia</option>
-                        <option value="Reunion">Reunion</option>
-                        <option value="Romania">Romania</option>
-                        <option value="Russia">Russia</option>
-                        <option value="Rwanda">Rwanda</option>
-                        <option value="St Barthelemy">St Barthelemy</option>
-                        <option value="St Eustatius">St Eustatius</option>
-                        <option value="St Helena">St Helena</option>
-                        <option value="St Kitts-Nevis">St Kitts-Nevis</option>
-                        <option value="St Lucia">St Lucia</option>
-                        <option value="St Maarten">St Maarten</option>
-                        <option value="St Pierre &amp; Miquelon">St Pierre &amp; Miquelon</option>
-                        <option value="St Vincent &amp; Grenadines">St Vincent &amp; Grenadines</option>
-                        <option value="Saipan">Saipan</option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="Samoa American">Samoa American</option>
-                        <option value="San Marino">San Marino</option>
-                        <option value="Sao Tome &amp; Principe">Sao Tome &amp; Principe</option>
-                        <option value="Saudi Arabia">Saudi Arabia</option>
-                        <option value="Senegal">Senegal</option>
-                        <option value="Serbia">Serbia</option>
-                        <option value="Seychelles">Seychelles</option>
-                        <option value="Sierra Leone">Sierra Leone</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Slovakia">Slovakia</option>
-                        <option value="Slovenia">Slovenia</option>
-                        <option value="Solomon Islands">Solomon Islands</option>
-                        <option value="Somalia">Somalia</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="Spain">Spain</option>
-                        <option value="Sri Lanka">Sri Lanka</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Suriname">Suriname</option>
-                        <option value="Swaziland">Swaziland</option>
-                        <option value="Sweden">Sweden</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Syria">Syria</option>
-                        <option value="Tahiti">Tahiti</option>
-                        <option value="Taiwan">Taiwan</option>
-                        <option value="Tajikistan">Tajikistan</option>
-                        <option value="Tanzania">Tanzania</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tokelau">Tokelau</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
-                        <option value="Tunisia">Tunisia</option>
-                        <option value="Turkey">Turkey</option>
-                        <option value="Turkmenistan">Turkmenistan</option>
-                        <option value="Turks &amp; Caicos Is">Turks &amp; Caicos Is</option>
-                        <option value="Tuvalu">Tuvalu</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="United Arab Erimates">United Arab Emirates</option>
-                        <option value="Uraguay">Uruguay</option>
-                        <option value="Uzbekistan">Uzbekistan</option>
-                        <option value="Vanuatu">Vanuatu</option>
-                        <option value="Vatican City State">Vatican City State</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
-                        <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
-                        <option value="Wake Island">Wake Island</option>
-                        <option value="Wallis &amp; Futana Is">Wallis &amp; Futana Is</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zaire">Zaire</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
-                     </select>
-                  </fieldset>
-                  </p>
-                  <fieldset>
-                     <label for="lob">Line of Business</label>
-                     <select name="lob" id="lob">
-                        <option value="Agriculture">Agriculture</option>
-                        <option value="Business Services">Business Services</option>
-                        <option value="Construction & Real Estate">Construction & Real Estate</option>
-                        <option value="Education">Education</option>
-                        <option value="Energy, Raw Materials & Utilities">Energy, Raw Materials &amp; Utilities</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Government">Government</option>
-                        <option value="Healthcare">Healthcare</option>
-                        <option value="IT">IT</option>
-                        <option value="Leisure & Hospitality">Leisure & Hospitality</option>
-                        <option value="Libraries">Libraries</option>
-                        <option value="Manufacturing">Manufacturing</option>
-                        <option value="Media & Internet">Media & Internet</option>
-                        <option value="Non-Profit & Professional Orgs.">Non-Profit & Professional Orgs.</option>
-                        <option value="Retail">Retail</option>
-                        <option value="Software">Software</option>
-                        <option value="Telecommunications">Telecommunications</option>
-                        <option value="Transportation">Transportation</option>
-                     </select>
-                  </fieldset>
-               </div>
-               <div id="tabs-3">
-                  <div class="widget"> 
-                     <?php
-                        function createQuestions($number,$area) {
-                        $string = file_get_contents("questions.json");
-                        $json = json_decode($string, true);
-                        
-                        $automation_dev_array = $json['development']['automation'];
-                        $automation_ops_array = $json['operations']['automation'];
-                        $methodology_dev_array = $json['development']['methodology'];
-                        $methodology_ops_array = $json['operations']['methodology'];
-                        $architecture_dev_array = $json['development']['architecture'];
-                        $architecture_ops_array = $json['operations']['architecture'];
-                        $strategy_dev_array = $json['development']['strategy'];
-                        $strategy_ops_array = $json['operations']['strategy'];
-                        $environment_dev_array = $json['development']['environment'];
-                        $environment_ops_array = $json['operations']['environment'];  
-                        $i=0;
-                        print "<fieldset>
-                            <legend>Development</legend>";
-                        while( $i < 5) {
-                        if ($i == 0) {
-                        $ii = $i + 1;
-                        $check = "checked";
-                        } else {
-                        $check = "";
-                        }
-                        print "<input class=\"w3-radio\" type=\"radio\" name=\"d" . $number . "\" id=\"radio-1\" value=\"$i\" $check> <label>" . $json['development'][$area][$i] . "</label><br>";
-                        $i++;
-                        }
-                        print "  </fieldset>";
-                        
-                        
-                        # Rinse and repeat for Ops
-                        $i=0;
-                        print "  <fieldset>
-                            <legend>Operations</legend>";
-                        
-                        while( $i < 5) {
-                        $ii = $i + 1;
-                        if ($i == 0) {
-                        $check = "checked";
-                        } else {
-                        $check = "";
-                        }
-                        print "<input class=\"w3-radio\" type=\"radio\" name=\"o" . $number . "\" id=\"radio-1\" value=\"$i\" $check> <label>" . $json['operations'][$area][$i] . "</label><br>";
-                        $i++;
-                        }
-                        print "  </fieldset> ";
-                        
-                        
-                        }
-                        # End of Function
-                        
-                        createQuestions("1","automation");
-                        
-                        
-                        ?>    
-                  </div>
-                  </p>
-               </div>
-               <div id="tabs-4">
-                  <?php
-                     createQuestions(2,"methodology");
-                     ?> 
-               </div>
-               <div id="tabs-5">
-                  <?php
-                     createQuestions(3,"architecture");
-                     ?> 
-               </div>
-               <div id="tabs-6">
-                  <?php
-                     createQuestions(4,"strategy");
-                     ?> 
-               </div>
-               <div id="tabs-7">
-                  <?php
-                     createQuestions(5,"environment");
-                     ?>
+                  <div id="tabs-next"></div>
                </div>
             </div>
+            <!--  <div id="tabs-8">
+               <p>  <input type="submit" value="Submit">
+               </p>
+               </div>
+               -->
          </form>
       </div>
-      </div> <!-- /container -->
+      <footer style="bottom: 0; position: fixed; color: #cc0000; background-color: #fff; height: 60px;">
+         <div class="inner-wrapper">
+            <div class="grid">
+               <div class="xl-colspan-12">
+                  <p style="font-size: 11px; line-height: 11px; margin: 15px 0 0 0; padding: 0; font-family: 'overpass'; color: #000; font-weight: bold;">Copyright &#169; 2017 Red Hat, Inc.</p>
+               </div>
+            </div>
+            <div class="grid">
+               <div class="xl-colspan-12">
+                  <ul class="h-align">
+                     <li><a href="http://www.redhat.com/footer/privacy-policy.html" style="font-family: 'overpass'; font-weight: bold;">Privacy policy</a><span style="margin: 0 5px 0 5px;">|</span></li>
+                     <li><a href="http://www.redhat.com/footer/terms-of-use.html" style="font-family: 'overpass'; font-weight: bold;">Terms of use</a><span style="margin: 0 5px 0 5px;">|</span></li>
+                     <li><a href="https://partnercenter.force.com/s/Help" style="font-family: 'overpass'; font-weight: bold;">Contact us</a><span style="margin: 0 5px 0 5px;">|</span></li>
+                     <li><a href="http://www.redhat.com/about/" style="font-family: 'overpass'; font-weight: bold;">About Red Hat</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- /container -->
       <?php    }
          ####  End of Logged on bit ######
+         
+         else {
+         ?><script type="text/javascript">
+         window.location.replace('register.php');
+      </script><?php 
+         }
          ?>
    </body>
 </html>
