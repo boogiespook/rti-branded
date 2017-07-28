@@ -515,7 +515,7 @@
       <div id="main-content" class="inner-wrapper">
          <!-- Main component for a primary marketing message or call to action -->
          <!--      <div class="jumbotron"> -->
-         <form name="myForm" id="innovate-form" action="results.php">
+         <form name="myForm" id="innovate-form" action="tmp.php">
             <div class="tabs">
                <div class="grid">
                   <div class="xl-gap-3 xl-colspan-8 m-gap-1 m-colspan-12">
@@ -526,7 +526,7 @@
                         <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-2" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Methodology</a></li>
                         <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-3" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Architecture</a></li>
                         <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-4" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Strategy</a></li>
-                        <li class="navigation-point" style="background-color: transparent; margin: 0; padding: 0;"><a class="active" href="#tabs-5" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter; padding-bottom: 10px;">Resources</a></li>
+                        <li class="navigation-point" style="background-color: transparent; margin: 0; padding: 0;"><a class="active" href="#tabs-5" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter; padding-bottom: 10px;">Environment</a></li>
                      </ul>
                   </div>
                </div>

@@ -526,7 +526,7 @@
                         <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-2" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Methodology</a></li>
                         <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-3" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Architecture</a></li>
                         <li class="navigation-point" style="background-color: transparent; margin: 0 15px 0 0; padding: 0;"><a class="active" href="#tabs-4" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter;">Strategy</a></li>
-                        <li class="navigation-point" style="background-color: transparent; margin: 0; padding: 0;"><a class="active" href="#tabs-5" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter; padding-bottom: 10px;">Resources</a></li>
+                        <li class="navigation-point" style="background-color: transparent; margin: 0; padding: 0;"><a class="active" href="#tabs-5" style="color: #fff; margin: 0; padding: 0; font-family: 'overpass'; font-weight: lighter; padding-bottom: 10px;">Environment</a></li>
                      </ul>
                   </div>
                </div>

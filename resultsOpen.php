@@ -481,10 +481,13 @@ foreach( $data_array as $var => $value )
 <p style="font-family: 'overpass';">This document is not a quote, and does not represent an official Statement of Work.  If acceptable, a formal quote can be issued, which will include a contract with the scope of work, cost, and any Client requirements if necessary.</p>
 
 
-
-
 <p style="font-size: 20px; text-transform: uppercase; font-weight: bold; color: #cc0000; padding: 25px 0 20px 0; font-family: 'overpass';">Red Hat Consulting Solution Delivery Framework</p>
-<p style="margin-bottom: 20px;"><img src="images/image00.png" alt="Delivery Framework"></p>
+
+<div class="grid">
+  <div class="xl-colspan-7 m-colspan-12">
+      <p style="margin-bottom: 20px;"><img src="images/image00.png" alt="Delivery Framework" style="width: 100%;"></p>
+  </div>
+</div>
 <br>
 <p style="font-family: 'overpass';">Red Hat Consulting follows a repeatable framework for defining and implementing solutions with high value for our clients. That framework outlines a series of phases that each contribute to a clearly defined Client business driven goal. Red Hat Consulting aims to provide focused Client value across the areas of people, process, and technology, whilst also providing a supporting role in establishing bigger picture IT Transformation initiatives.</p>
  

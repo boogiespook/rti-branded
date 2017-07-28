@@ -23,6 +23,7 @@ connectDB();
 $error = false;
 
 //check if form is submitted
+
 if (isset($_POST['signup'])) {
 	$name = mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $_POST['name']);
 	$email = mysqli_real_escape_string($GLOBALS["___mysqli_ston"], $_POST['email']);
@@ -55,11 +56,21 @@ if (isset($_POST['signup'])) {
     }
 	
 	
-	if (!$error) {
-		$qq = "INSERT INTO users(name,email,password,uuid) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "',uuid())	";
-		if(mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO users(name,email,password) VALUES('" . $name . "', '" . $email . "', '" . md5($password) . "')")) {
+	if ( !$error )
+	{
+		$args = array ($name, $email, md5($password), generate_my_uuid());
+		$query = vsprintf
+		(
+			'INSERT INTO users(name,email,password,uuid) VALUES("%1$s", "%2$s", "%3$s","%4$s")', $args
+		);
+		
+		var_dump($query);
+		if ( mysqli_query($GLOBALS["___mysqli_ston"], $query) )
+		{
 			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
-		} else {
+		}
+		else
+		{
 			$errormsg = "Error in registering...Please try again later!";
 		}
 	}

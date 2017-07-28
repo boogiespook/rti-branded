@@ -406,8 +406,26 @@ fieldset {
    text-transform: uppercase;
 }
 
+
+/**
+* ----------------------------------------------------------------
+* messages
+* ----------------------------------------------------------------
+**/
+
+.text-danger{
+   font-size: 15px;
+   font-weight: bold;
+}
+
 .text-success{
    color: #3c763d;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.text-success a{
+   color: green !important;
 }
 
 /**
@@ -461,6 +479,33 @@ button.navbar-toggle{
    text-transform: uppercase;
    font-family: "Overpass Regular", arial, helvetica, sans-serif;
    font-size: 15px !important;
+}
+
+.btn-printable-version{
+   font-size: 13px;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-family: "Overpass Regular", arial, helvetica, sans-serif;
+}
+
+.result-printable{
+   font-family: 'overpass'; 
+   font-size: 16px; 
+   font-weight: bold; 
+   color: #fff; 
+   background-color: #cc0000; 
+   margin: 5px 5px 0 0; 
+   padding: 3px 12px 6px 13px;
+}
+
+.result-analysis-opener{
+   font-family: 'overpass'; 
+   font-size: 16px; 
+   font-weight: bold; 
+   color: #fff; 
+   background-color: #cc0000; 
+   margin-right: 5px; 
+   padding: 5px 15px 5px 14px;
 }
 
 .form-control{
@@ -588,6 +633,16 @@ footer li a:hover{
 * breakpoints
 * ----------------------------------------------------------------
 **/
+
+@media (max-width: 805px){
+   .result-printable{
+      margin: 5px 5px 0 -9px;
+   }
+
+   .result-analysis-opener{
+      padding: 5px 13px 5px 14px;
+   }
+}
 
 /* --- 808px --- */
 

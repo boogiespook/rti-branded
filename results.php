@@ -8,6 +8,7 @@
       <title>Ready to Innovate Assessment</title>
       <link href="http://static.jboss.org/css/rhbar.css" media="screen" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/grid.css"/>
+      <link rel="stylesheet" type="text/css" href="css/custom.css"/>
       <title>Ready to Innovate Assessment</title>
       <link href="http://static.jboss.org/css/rhbar.css" media="screen" rel="stylesheet">
       <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
@@ -15,7 +16,7 @@
       <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
       <link rel="stylesheet" type="text/css" href="http://overpass-30e2.kxcdn.com/overpass.css"/>
       <!--  <script src="js/jquery-1.10.2.js"></script>-->
-      <link rel="stylesheet" href="/resources/demos/style.css">
+      
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
       <style>
          /**
@@ -410,34 +411,41 @@
          .finals{
          text-transform: uppercase;
          color: #000;
-         margin-top: 300px;
+         margin-top: 390px;
          }
          @media (max-width: 1270px){
          .finals{
          text-transform: uppercase;
          color: #000;
-         margin-top: 250px;
+         margin-top: 320px;
          }
          }  
          @media (max-width: 1170px){
          .finals{
          text-transform: uppercase;
          color: #000;
-         margin-top: 200px;
+         margin-top: 290px;
          }
          }  
          @media (max-width: 1064px){
          .finals{
          text-transform: uppercase;
          color: #000;
-         margin-top: 150px;
+         margin-top: 230px;
          }
-         }  
+         }
+         @media (max-width: 950px){
+            .finals{
+            text-transform: uppercase;
+            color: #000;
+            margin-top: 180px;
+         }
+
          @media (max-width: 840px){
          .finals{
          text-transform: uppercase;
          color: #000;
-         margin-top: 100px;
+         margin-top: 130px;
          }
          }  
          @media (max-width: 800px){
@@ -557,7 +565,6 @@
       <script>
          $(document).ready(function() {
            $(function() {
-             console.log('false');
              $( "#dialog" ).dialog({
                  autoOpen: false,
                  title: 'Email PDF'
@@ -580,7 +587,9 @@
          connectDB();
          
          # Retrieve the data
+         
          $hash = $_REQUEST['hash'];
+
          $qq = "SELECT * FROM data WHERE hash='".mysqli_real_escape_string($db, $hash)."'";
          $res = mysqli_query($db, $qq);
          $data_array = mysqli_fetch_assoc($res);
@@ -680,9 +689,9 @@
                         data: [d1,d2,d3,d4,d5]
                     }, {
                         label: "Ops",
-                        backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
-                        borderColor: window.chartColors.blue,
-                        pointBackgroundColor: window.chartColors.blue,
+                        backgroundColor: color(window.chartColors.black).alpha(0.2).rgbString(),
+                        borderColor: window.chartColors.black,
+                        pointBackgroundColor: window.chartColors.black,
                         data: [o1,o2,o3,o4,o5]
             
                     }]
@@ -822,7 +831,7 @@
       <div id="" style="margin: 50px 0 0 50px;">
          <div class="container-buttons" style="margin-top: 0;">
             <p style="font-size: 18px; text-transform: uppercase; font-family: 'overpass'; font-weight: bold;">Check out your results:</p>
-            <span style="font-family: 'overpass'; font-size: 16px; font-weight: bold; color: #fff; background-color: #cc0000; margin-right: 5px; padding: 5px 15px 5px 14px;">1.</span><button id="analysis-opener" class="same-h" style="font-family: 'overpass'; text-transform: uppercase; font-weight: bold;">Open Analysis Dialog</button>
+            <span class="result-analysis-opener">1.</span><button id="analysis-opener" class="same-h" style="font-family: 'overpass'; text-transform: uppercase; font-weight: bold;">Open Analysis Dialog</button>
               <br>
               <span style="font-family: 'overpass'; font-size: 16px; font-weight: bold; color: #fff; background-color: #cc0000; margin-right: 5px; padding: 5px 12px 5px 13px;">2.</span><button id="priorities-opener" class="same-h" style="font-family: 'overpass'; text-transform: uppercase; font-weight: bold;">Top 3 Action Areas</button>
               <br>
@@ -830,13 +839,13 @@
               <br>
                 <span style="font-family: 'overpass'; font-size: 16px; font-weight: bold; color: #fff; background-color: #cc0000; margin-right: 5px; padding: 5px 12px 5px 13px;">4.</span><button id="average-opener-dev" class="same-h" style="font-family: 'overpass'; text-transform: uppercase; font-weight: bold;">Average Comparison (Dev)</button>
               <br>
-              <span style="font-family: 'overpass'; font-size: 16px; font-weight: bold; color: #fff; background-color: #cc0000; margin-right: 5px; padding: 5px 12px 5px 13px;">5.</span><button id="average-opener-ops" class="same-h" style="font-family: 'overpass'; text-transform: uppercase; font-weight: bold;">Average Comparison (Ops)</button>
+              <span style="font-family: 'overpass'; font-size: 16px; font-weight: bold; color: #fff; background-color: #cc0000; margin-right: 5px; margin-bottom: 5px; padding: 5px 12px 5px 13px;">5.</span><button id="average-opener-ops" class="same-h" style="font-family: 'overpass'; text-transform: uppercase; font-weight: bold;">Average Comparison (Ops)</button>
               <br>
-              <a href="resultsOpen.php?hash=<?php echo $hash ?>" target="_blank"><input type="button" value="Printable Version"></a>
+              <span class="result-printable">6.</span><a href="resultsOpen.php?hash=<?php echo $hash ?>" target="_blank"><input type="button" value="Printable Version" class="same-h btn-printable-version"></a>
 
-           <!-- <div class="finals" style="margin-top: 500px;">
+          <div class="finals">
           <h2 class="results-head" style="font-size: 22px; font-family: 'overpass';">Your input of the assessment. If you would like to rerun the assessment start <a href="assess.php" style="color: #cc0000;">here</a></h2>
-      </div>-->
+      </div>
 
             <table class="bordered">
                <thead>
