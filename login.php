@@ -39,6 +39,7 @@ connectDB();
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css" />
     <!--  <script src="js/jquery-1.10.2.js"></script>-->
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -61,8 +62,8 @@ connectDB();
 			<!-- menu items -->
 			<div class="collapse navbar-collapse" id="navbar1">
 				<ul class="nav navbar-nav navbar-right">
+					<li><a href="register.php" title="Register" alt="Register"><span class="glyphicon glyphicon-user nav-button"></span></a></li>
 					<li class="active"><a href="login.php" title="Login" alt="Login"><span class="glyphicon glyphicon-log-in nav-button"></span></a></li>
-            		<li><a href="register.php" title="Register" alt="Register"><span class="glyphicon glyphicon-user nav-button"></span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -167,5 +168,6 @@ connectDB();
 
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
 </body>
 </html>

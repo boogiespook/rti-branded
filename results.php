@@ -608,7 +608,7 @@
          <div class="inner-wrapper">
             <a class="navbar-brand" href="results.php"><img src="images/Logo_RH_RGB_Reverse.png" style="width: 100px; margin: 0 0 0 0;"></a>
             <a class="navbar-brand" href="assess.php" style="float: right; border: 0; text-decoration: none;">
-               <p style="color: #fff; font-size: 12px; font-family: 'overpass';" class="head-line">You would like to start again?<span align="right" style="margin: 0; padding-top: 10px; padding-left: 10px; color: #fff; font-size: 15px;" class="glyphicon glyphicon-repeat" title="Start again" alt="Start again"></span></p>
+               <p style="color: #fff; font-size: 12px; font-family: 'overpass';" class="head-line"><span align="right" style="margin: 0; padding-top: 10px; padding-left: 10px; color: #fff; font-size: 15px;" class="glyphicon glyphicon-repeat" title="Start again" alt="Start again"></span></p>
             </a>
          </div>
       </div>

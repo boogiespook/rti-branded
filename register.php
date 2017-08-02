@@ -113,8 +113,8 @@ if (isset($_POST['signup'])) {
 		<!-- menu items -->
 			<div class="collapse navbar-collapse" id="navbar1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="login.php" title="Login" alt="Login"><span class="glyphicon glyphicon-log-in" style="margin-top: 5px; color: #fff;"></span></a></li>
 					<li class="active"><a href="register.php" title="Register" alt="Register"><span class="glyphicon glyphicon-user" style="margin-top: 5px; color: #fff;"></span></a></li>
+					<li><a href="login.php" title="Login" alt="Login"><span class="glyphicon glyphicon-log-in" style="margin-top: 5px; color: #fff;"></span></a></li>
 				</ul>
 			</div>
 		</div>

@@ -416,12 +416,14 @@ fieldset {
 .text-danger{
    font-size: 15px;
    font-weight: bold;
+   font-family: "Overpass Regular", arial, helvetica, sans-serif;
 }
 
 .text-success{
    color: #3c763d;
    font-size: 15px;
    font-weight: bold;
+   font-family: "Overpass Regular", arial, helvetica, sans-serif;
 }
 
 .text-success a{

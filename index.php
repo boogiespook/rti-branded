@@ -249,7 +249,7 @@
          input[type=checkbox].w3-check, input[type=radio].w3-radio {
          float: left;
          position: relative;
-         top: -3px;
+         top: 0;
          margin: 0;
          padding: 0;
          }
@@ -401,24 +401,24 @@
          padding: 0 !important;
          }
          #tabs-1{
-         margin-top: 70px;
-         margin-bottom: 30px;
+         margin-top: 50px;
+         margin-bottom: 15px;
          }
          #tabs-2{
-         margin-top: 70px;
-         margin-bottom: 30px;
+         margin-top: 50px;
+         margin-bottom: 15px;
          }
          #tabs-3{
-         margin-top: 70px;
-         margin-bottom: 30px;
+         margin-top: 50px;
+         margin-bottom: 15px;
          }
          #tabs-4{
-         margin-top: 70px;
-         margin-bottom: 30px;
+         margin-top: 50px;
+         margin-bottom: 15px;
          }
          #tabs-5{
-         margin-top: 70px;
-         margin-bottom: 30px;
+         margin-top: 50px;
+         margin-bottom: 15px;
          }
          footer{
          position: fixed;
@@ -481,7 +481,7 @@
                         -->
                      <ul class="nav navbar-nav navbar-right">
                         <?php if (isset($_SESSION['usr_id'])) { ?><!--<li><p class="navbar-text" style="color: #fff; margin-top: 20px;"><?php echo $_SESSION['usr_name']; ?></p></li>-->
-                        <li><a href="logout.php" title="Logout" alt="Logout"></a></li>
+                        <li><a href="logout.php" title="Logout" alt="Logout"><span class="glyphicon glyphicon-log-out" style="margin-top: 5px; color: #fff;"></span></a></li>
                         <li><a href="http://ready-to-innovate.com/blog/" target="_blank" title="Blog" alt="Blog" style="color: #fff;"></a></li>
                         <?php } else { ?>
                         <li><a href="login.php" title="Login" alt="Login"></a></li>
@@ -515,7 +515,7 @@
       <div id="main-content" class="inner-wrapper">
          <!-- Main component for a primary marketing message or call to action -->
          <!--      <div class="jumbotron"> -->
-         <form name="myForm" id="innovate-form" action="results.php">
+         <form name="myForm" id="innovate-form" action="tmp.php">
             <div class="tabs">
                <div class="grid">
                   <div class="xl-gap-3 xl-colspan-8 m-gap-1 m-colspan-12">

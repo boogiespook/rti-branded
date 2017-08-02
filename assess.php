@@ -481,7 +481,7 @@
                         -->
                      <ul class="nav navbar-nav navbar-right">
                         <?php if (isset($_SESSION['usr_id'])) { ?><!--<li><p class="navbar-text" style="color: #fff; margin-top: 20px;"><?php echo $_SESSION['usr_name']; ?></p></li>-->
-                        <li><a href="logout.php" title="Logout" alt="Logout"></a></li>
+                        <li><a href="logout.php" title="Logout" alt="Logout"><span class="glyphicon glyphicon-log-out" style="margin-top: 5px; color: #fff;"></span></a></li>
                         <li><a href="http://ready-to-innovate.com/blog/" target="_blank" title="Blog" alt="Blog" style="color: #fff;"></a></li>
                         <?php } else { ?>
                         <li><a href="login.php" title="Login" alt="Login"></a></li>
