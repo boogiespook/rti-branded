@@ -21,7 +21,7 @@ connectDB();
 		$_SESSION['usr_name'] = $row['name'];
 		header("Location: assess.php");
 	} else {
-		$errormsg = "Incorrect Username or Password!!!";
+		$errormsg = "<script>swal('Incorrect Username or Password!');</script>";
 	}
 }
 ?>
@@ -43,6 +43,8 @@ connectDB();
     <!--  <script src="js/jquery-1.10.2.js"></script>-->
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.js"></script>
+	<script src="js/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -165,9 +167,6 @@ connectDB();
     </div>
     
 </footer>
-
-<script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/sweetalert.min.js"></script>
 </body>
 </html>

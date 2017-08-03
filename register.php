@@ -33,7 +33,8 @@ if (isset($_POST['signup'])) {
 	//name can contain only alpha characters and space
 	if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
 		$error = true;
-		$name_error = "Name must contain only alphabets and space";
+		#$name_error = "Name must contain only alphabets and space";
+		$name_error = "<script>swal('Name must contain only alphabets and space');</script>";
 	}
 #	if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 #		$error = true;
@@ -41,18 +42,20 @@ if (isset($_POST['signup'])) {
 #	}
 	if(strlen($password) < 6) {
 		$error = true;
-		$password_error = "Password must be minimum of 6 characters";
+		#$password_error = "Password must be minimum of 6 characters";
+		$password_error = "<script>swal('Password must be minimum of 6 characters');</script>";
 	}
 	if($password != $cpassword) {
 		$error = true;
-		$cpassword_error = "Password and Confirm Password doesn't match";
+		#$cpassword_error = "Password and Confirm Password doesn't match";
+		$cpassword_error = "<script>swal('Password and Confirm Password doesn\'t match');</script>";
 	}
-
 
     $image = new Securimage();
     if ($image->check($_POST['captcha_code']) != true) {
 	   $error = true;
-	   $captcha_error = "Captcha entry incorrect";
+	   #$captcha_error = "Captcha entry incorrect";
+	   $captcha_error = "<script>swal('Captcha entry incorrect');</script>";
     }
 	
 	
@@ -63,15 +66,18 @@ if (isset($_POST['signup'])) {
 		(
 			'INSERT INTO users(name,email,password,uuid) VALUES("%1$s", "%2$s", "%3$s","%4$s")', $args
 		);
-		
-		var_dump($query);
+
 		if ( mysqli_query($GLOBALS["___mysqli_ston"], $query) )
 		{
-			$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
+			$successmsg = "<script>swal('Successfully Registered! You can now login');</script>";
+
+			#$successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
 		}
 		else
 		{
-			$errormsg = "Error in registering...Please try again later!";
+			#$errormsg = "Error in registering...Please try again later!";
+
+			$errormsg = "<script>swal('Here\'s a me65743e!');</script>";
 		}
 	}
 }
@@ -90,9 +96,12 @@ if (isset($_POST['signup'])) {
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     <!--  <script src="js/jquery-1.10.2.js"></script>-->
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.js"></script>
+	<script src="js/sweetalert.min.js"></script>
 
 </head>
 <body>
@@ -245,7 +254,6 @@ if (isset($_POST['signup'])) {
     </div>
     
 </footer>
-			<script src="js/jquery-1.10.2.js"></script>
 			<script src="js/bootstrap.min.js"></script>
 			</body>
 			</html>
