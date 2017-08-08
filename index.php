@@ -615,7 +615,7 @@
                         </div>
                      </div>
                   </div>
-                  <div id="tabs-next"></div>
+                  <div id="tabs-next" style="margin-bottom: 100px;></div>
                </div>
             </div>
             <!--  <div id="tabs-8">
